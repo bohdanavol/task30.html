@@ -1,0 +1,42 @@
+:root{ --cell:50px; }
+
+*{ box-sizing:border-box; }
+body{
+  font-family:system-ui, Arial, sans-serif;
+  margin:20px;
+}
+#msg{
+  margin:10px 0 16px;
+  font-weight:600;
+}
+#game{
+  position:relative;
+  border:2px solid #333;
+  background:#fafafa;
+  outline:none;
+}
+
+.cell, #player, #finish{
+  position:absolute;
+  width:var(--cell);
+  height:var(--cell);
+}
+.cell.floor{ background:#fff; border:1px solid #eee; }
+.cell.wall{  background:#222; }
+
+#player, #finish{
+  display:block;
+  user-select:none;
+  pointer-events:none;
+}
+
+#player{
+  border:1px solid transparent;
+}
+#finish{
+  border:1px solid transparent;
+}
+
+.toooook{border-collapse:collapse; width:100%}
+.toooook th,.toooook td{border: 5px solid rgb(92, 230, 82); padding:8px}
+.toooook thead th{background:#8ee6f4}
